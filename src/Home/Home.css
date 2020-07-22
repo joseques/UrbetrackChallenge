@@ -1,0 +1,147 @@
+.DarkBody {
+	background-color: #2f2f2f !important;
+}
+
+.LightBody {
+	background-color: #c3c3c3 !important;
+}
+
+.wrapper {
+	padding: 5px;
+	max-width: 1920px;
+	width: 95%;
+	margin: 20px auto;
+}
+
+header {
+	padding: 0 15px;
+}
+
+.grid {
+	line-height: 0;
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+
+.column {
+	flex: 1;
+	border: 1px solid gray;
+	margin: 2px;
+	padding: 10px;
+}
+
+.column:first-child {
+	margin-left: 0;
+	max-width: 10%;
+}
+
+.column:last-child {
+	margin-right: 0;
+}
+
+footer {
+	padding: 0 15px;
+}
+
+.grid .tile {
+	width: 33.33%;
+	min-height: 20em;
+	line-height: 1.2;
+	display: inline-block;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
+	color: #fff;
+	font-family: "Verdana", sans-serif;
+	text-shadow: 2px 2px 2px #000;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.grid .tile:before {
+	content: '';
+	background-color: rgba(15, 15, 15, 0.5);
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	position: absolute;
+}
+
+.grid .tile:hover:before {
+	display: none;
+}
+
+.grid .tile .text {
+	text-align: center;
+	vertical-align: middle;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: .75em;
+}
+
+.grid .tile:hover .text .content h2 {
+	margin: 0;
+}
+.urbetrack_logo{
+	width: 8%;
+}
+.column.sidebar{
+	text-align: center;
+}
+.column.sidebar button.sidebar-button {
+	display: block;
+	margin: 5px 0px;
+	width: 100%;
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 15px 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	background: #1ab188;
+	color: #ffffff;
+}
+
+.column.sidebar button.sidebar-button:hover {
+	cursor: pointer;
+	background: #2ad1a8;
+}
+
+@media (max-width: 1000px) {
+	.grid .tile {
+		width: 50%;
+	}
+	.columns .column {
+		margin-bottom: 5px;
+		flex-basis: 40%;
+	}
+	.columns .column:nth-last-child(2) {
+		margin-right: 0;
+	}
+	.columns .column:last-child {
+		flex-basis: 100%;
+		margin: 0;
+	}
+}
+
+@media (max-width: 700px) {
+	.grid .tile {
+		width: 100%;
+	}
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+}
